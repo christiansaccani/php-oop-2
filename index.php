@@ -1,7 +1,15 @@
 <?php
 
 require './db.php';
+require './Models/Guest.php';
+require './Models/User.php';
 
+
+// utenti standard
+$guest = new Guest("1234567890");
+$user = new User("1234567890", "premiumMario", "m@mail.com");
+
+$client = $guest;
 ?>
 
 <!DOCTYPE html>
