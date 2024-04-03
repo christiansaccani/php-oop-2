@@ -24,6 +24,12 @@ class Item {
         $this->price = $price;
         $this->category = $category;
         $this->type = $type;
+
+        if ($category == "dog") {
+            $this->category = '<i class="fa-solid fa-dog"></i>';
+        } else if ($category == "cat") {
+            $this->category = '<i class="fa-solid fa-cat"></i>';
+        }
     }
 
 }

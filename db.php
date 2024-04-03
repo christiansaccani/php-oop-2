@@ -5,9 +5,9 @@ require './Models/Item.php';
 // ______________________________________________________
 
 $items = [
-    new Item("Spazzolino per Cani", 9.99, '<i class="fa-solid fa-dog"></i>', "Prodotto"),
-    new Item("Croccantini per Gatti", 14.99, '<i class="fa-solid fa-cat"></i>', "Cibo"),
-    new Item("Palla da Lancio per Cani", 5.49, '<i class="fa-solid fa-dog"></i>', "Gioco"),
+    new Item("Spazzolino per Cani", 9.99, "dog", "Prodotto"),
+    new Item("Croccantini per Gatti", 14.99, "cat", "Cibo"),
+    new Item("Palla da Lancio per Cani", 5.49, "dog", "Gioco"),
 ];
 
 
