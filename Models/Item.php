@@ -3,13 +3,11 @@
 
 class Item {
 
-    public $image;
+    public $image = 'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg';
     public $title;
     public $price;
     public $category;
     public $type;
-
-    
     /**
      * __construct
      *
@@ -18,11 +16,10 @@ class Item {
      * @param  float $price
      * @param  string $category
      * @param  string $type
-    */
+     */
 
 
-    function __construct($image, $title, $price, $category, $type) {
-        $this->image = $image;
+    function __construct($title, $price, $category, $type) {
         $this->title = $title;
         $this->price = $price;
         $this->category = $category;
@@ -30,5 +27,3 @@ class Item {
     }
 
 }
-
-?>
