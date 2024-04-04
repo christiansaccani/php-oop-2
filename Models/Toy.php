@@ -26,7 +26,21 @@ class Toy extends Product {
         
         $this->type = "Gioco";
         $this->material = $material;
-        $this->priceSmallSize = $priceSmallSize;
-        $this->priceBigSize = $priceBigSize;
+        
+        if(is_numeric($priceSmallSize)) {
+
+            $this->priceSmallSize = $priceSmallSize;
+        } else {
+
+            throw new Exception("Il peso inserito non è di valore numerico");
+        }
+
+        if(is_numeric($priceBigSize)) {
+
+            $this->priceBigSize = $priceBigSize;
+        } else {
+
+            throw new Exception("Il peso inserito non è di valore numerico");
+        }
     }
 }

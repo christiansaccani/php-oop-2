@@ -27,11 +27,34 @@ class Food extends Product {
      */
     function __construct($id, $name, $price, Category $category, $weight, $mainIngredient, $expireDate, $priceSmallSize, $priceBigSize) {
         parent::__construct($id, $name, $price, $category);
-        $this->weight = $weight;
+
+        if(is_numeric($weight)) {
+
+            $this->weight = $weight;    
+        } else {
+
+            throw new Exception("Il peso inserito non è di valore numerico");
+        }
+
         $this->mainIngredient = $mainIngredient;
         $this->expireDate = $expireDate;
-        $this->priceSmallSize = $priceSmallSize;
-        $this->priceBigSize = $priceBigSize;
+
+        if(is_numeric($priceSmallSize)) {
+
+            $this->priceSmallSize = $priceSmallSize;
+        } else {
+
+            throw new Exception("Il peso inserito non è di valore numerico");
+        }
+
+        if(is_numeric($priceBigSize)) {
+
+            $this->priceBigSize = $priceBigSize;
+        } else {
+
+            throw new Exception("Il peso inserito non è di valore numerico");
+        }
+
 
         // specifico che la categoria di questo prodotto è "cibo"
         $this->type = 'Cibo';
