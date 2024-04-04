@@ -1,7 +1,14 @@
 <?php
 
+require_once __DIR__ . '/Product.php';
+
+require_once __DIR__ . "/../Traits/Sizeable.php";
+
 
 class Toy extends Product {
+
+    use Sizeable;
+
     public $material;    
     /**
      * __construct
@@ -10,13 +17,16 @@ class Toy extends Product {
      * @param  string $name
      * @param  float $price
      * @param  Category $category
-     * @param  string $material
+     * @param  float $priceSmall
+     * @param  float $priceBig
      */
-    function __construct($id, $name, $price, Category $category, $material) { 
+    function __construct($id, $name, $price, Category $category, $material, $priceSmallSize, $priceBigSize) { 
 
         parent::__construct($id, $name, $price, $category);
-        $this->material = $material;
         
         $this->type = "Gioco";
+        $this->material = $material;
+        $this->priceSmallSize = $priceSmallSize;
+        $this->priceBigSize = $priceBigSize;
     }
 }

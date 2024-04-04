@@ -19,15 +19,15 @@ $dogCategory = new Category("Cani", "fa-dog");
 
 
 // cibo
-$crocchette = new Food(123, "Crocchette Crock", 3.14, $catCategory, 0.5, 'pesce', '10/24');
+$crocchette = new Food(123, "Crocchette Crock", 14.99, $catCategory, 0.5, 'pesce', '10/24', 12.99, 22.99);
 $crocchette->setImage('https://m.media-amazon.com/images/I/71gB-bzxJmL._AC_UF1000,1000_QL80_.jpg');
 
 // giocattolo
-$pallina = new Toy(312, "Pallina Pally", 1, $dogCategory, "Gomma");
+$pallina = new Toy(312, "Pallina Pally", 3, $dogCategory, "Gomma", 2, 5);
 $pallina->setImage("https://m.media-amazon.com/images/I/61i3OJ4EycL._AC_UF894,1000_QL80_.jpg");
 
 // cuccia
-$cuccia = new Kennel(41, "Cuccia Blu", 7, $dogCategory, "medium");
+$cuccia = new Kennel(41, "Cuccia Blu", 54, $dogCategory, "medium");
 $cuccia->setImage("https://www.original-legno.com/wp-content/uploads/2021/06/Cucce_in_legno_italy_con_veranda_per_cani_in_4_misure-1.webp");
 
 // var_dump($cuccia);
@@ -40,8 +40,6 @@ $products = [
 ];
 
 // var_dump($products);
-
-
 
 
 // creo un nuovo cliente
